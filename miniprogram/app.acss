@@ -1,0 +1,172 @@
+page {
+  background: #f9F9F9;
+
+}
+
+/* 主体背景色。 */
+.Theme-background-color {
+  background: #4392F9;
+}
+
+/* 主容器 */
+.Master-conner {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* 导航栏样式 */
+.Navigation-bar-style {
+  width: 100%;
+  height: 50px;
+  flex-shrink: 0;
+  background: #4392F9
+}
+
+/* 容器样式。 */
+.Container-style {
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+/*  Logo标题文字。 */
+.Logo-title： {
+  color: #202020;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.52px;
+}
+
+/*  Logo标题描述文字。 */
+.Logo-title-description {
+  color: #202020;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 33px;
+  /* 173.684% */
+}
+
+/* 按钮文字。 */
+.Button-text {
+  color: #F3F3F3;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 31px;
+  /* 140.909% */
+}
+
+/* 描述性文字。 */
+.Descriptive-text {
+  color: #202020;
+  font-family: "Nunito Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  /* 173.333% */
+}
+
+/* 一级标题栏文字。 */
+.First-level-title-text {
+  color: #202020;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  /* 128.571% */
+  letter-spacing: -0.28px;
+}
+
+/* 二级标题文字。 */
+.Secondary-level-title-text {
+  color: #202020;
+  font-family: Raleway;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* 小按钮文字。 */
+.Small-button-text {
+  color: #4392F9;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  /* 126.667% */
+  letter-spacing: -0.15px;
+}
+
+/* 按钮样式。 */
+.Button-style {
+  border-radius: 16px;
+  background: #4392F9;
+}
+
+/* 产品描述文字。 */
+.Product-description-text {
+  color: #000;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  /* 133.333% */
+}
+
+/* 产品原价文字。 */
+.The-original-price-of-the-product {
+  color: #202020;
+  font-family: Raleway;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  /* 123.529% */
+  letter-spacing: -0.17px;
+}
+
+/* 产品折后价格。 */
+.The-discounted-price-of-the-product {
+  color: #202020;
+  font-family: Raleway;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  /* 123.529% */
+  letter-spacing: -0.17px;
+}
+
+/* 正文文字。 */
+.Body-text-style {
+  color: #000;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 150% */
+}
+
+/* 容器样式。 */
+.Container-style {
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+}

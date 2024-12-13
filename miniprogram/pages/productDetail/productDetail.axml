@@ -1,0 +1,255 @@
+<view class="container">
+  <!-- 状态栏 -->
+  <!-- 产品图片 -->
+  <view class="product-image">
+    <swiper
+      class="product-swiper"
+      indicator-dots="true"
+      autoplay="true"
+      interval="3000"
+      duration="500"
+    >
+      <block a:for="{{product.swiperImages}}" a:key="*this">
+        <swiper-item>
+          <image src="{{item}}" mode="aspectFill" class="swiper-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 产品信息 -->
+  <view class="product-container">
+    <!-- 价格展示 -->
+    <view class="price-container">
+      <text class="price-symbol">¥</text>
+      <text class="price-amount">{{product.dailyRent}}</text>
+      <text class="price-unit">/天</text>
+    </view>
+    <!-- 商品标题 -->
+    <view class="title-container">
+      <text class="tag-new">{{product.status}}</text>
+      <text class="title">{{product.title}}</text>
+    </view>
+    <!-- 租赁条款 -->
+    <view class="terms-container">
+      <view >
+        <block a:for="{{product.services}}" a:key="*this">
+          <text class="term-item">{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <!-- 支付分信息 -->
+    <view class="credit-container">
+      <view class="credit-content">
+        <image class="credit-icon" src="/assets/icons/zhima.png" mode="aspectFit" />
+        <text class="credit-text">芝麻信用</text>
+        <text class="credit-benefit">免押金</text>
+        <text class="credit-requirement">支付分≥550有机会享</text>
+      </view>
+    </view>
+  </view>
+  <!-- 产品参数 -->
+  <view class="product-details">
+    <!-- 配送信息 -->
+    <view class="detail-item delivery">
+      <view class="item-label">配送</view>
+      <view class="item-content">
+        <text class="highlight-text">现货</text>
+        <text class="normal-text">，预计付款后48小时内发货</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+
+    <!-- 保障信息 -->
+    <view class="detail-item guarantee">
+      <view class="item-label">保障</view>
+      <view class="item-content">
+        <view class="guarantee-item">
+          <image
+            class="guarantee-icon"
+            src="/assets/icons/shield.png"
+            mode="aspectFit"
+          />
+          <text>免赔保障</text>
+        </view>
+        <view class="guarantee-item">
+          <image
+            class="guarantee-icon"
+            src="/assets/icons/quality.png"
+            mode="aspectFit"
+          />
+          <text>租期质保</text>
+        </view>
+      </view>
+      <view class="arrow"></view>
+    </view>
+    <!-- 参数信息 -->
+    <view class="detail-item params">
+      <view class="item-label">参数</view>
+      <view class="item-content">
+        <text>APPLE/平果</text>
+        <text class="separator">|</text>
+        <text>中国大陆</text>
+        <text class="separator">|</text>
+        <text>Y</text>
+        <text class="separator">|</text>
+        <text>N</text>
+        <text class="separator">|</text>
+        <text>N</text>
+        <text class="separator">|</text>
+        <text>Y</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+    <!-- 选择信息 -->
+    <view class="detail-item selection">
+      <view class="item-label">选择</view>
+      <view class="item-content">
+        <text>到期续租/归还/买断</text>
+        <text class="separator">|</text>
+        <text>沙漠色钛金属</text>
+        <text class="separator">|</text>
+        <text>256G</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+  </view>
+  <!-- 切换菜单栏 -->
+  <view class="tab-navigator">
+    <!-- 导航标签栏 -->
+    <view class="tab-bar">
+      <view
+        a:for="{{tabs}}"
+        key="{{index}}"
+        class="tab-item {{activeTab === index ? 'active' : ''}}"
+        onTap="handleTabClick"
+        data-index="{{index}}"
+      >
+        <text class="tab-text">{{item.title}}</text>
+      </view>
+    </view>
+    <!-- 内容区域 -->
+    <view class="content-area">
+      <!-- 商品详情 -->
+      <view a:if="{{activeTab === 0}}" class="tab-content">
+
+        <view class="product-details">
+          <!-- 商品详情内容 -->
+          我是商品详情
+        </view>
+      </view>
+      <!-- 租赁说明 -->
+      <view a:if="{{activeTab === 1}}" class="tab-content">
+        <view class="rental-instructions">
+          <!-- 租赁流程 -->
+          <view class="process-container">
+            <view class="section">
+              <view class="section-title">
+                <text class="section-number">01</text>
+                租赁流程
+              </view>
+              <view class="steps">
+                <block a:for="{{steps}}">
+                  <view class="step">
+                    <image class="step-icon" src="{{item.icon}}" />
+                    <text class="step-text">{{item.text}}</text>
+                    <text class="step-subtext">{{item.subtext}}</text>
+                  </view>
+                </block>
+              </view>
+            </view>
+            <view class="section">
+              <view class="section-title">
+                <text class="section-number">02</text>
+                租赁计算
+              </view>
+              <text>签收次日开始算</text>
+              <text class="subtitle">假设您选择租期为4天（来回物流不算租期）</text>
+              <view class="calendar">
+                <block a:for="{{days}}">
+                  <view class="day {{(item >= selectedStartDay && item <= selectedEndDay) ? 'selected' : ''}}">
+                    {{item}}
+                  </view>
+                </block>
+              </view>
+            </view>
+            <view class="section">
+              <view class="section-title">
+                <text class="section-number">03</text>
+                租后方案
+              </view>
+              <block a:for="{{postRentalOptions}}">
+                <view class="option">
+                  <view class="option-title">{{item.title}}</view>
+                  <view class="option-desc">{{item.desc}}</view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 常见问题 -->
+      <view a:if="{{activeTab === 2}}" class="tab-content">
+        <view class="rental-instructions">
+          <!-- 租赁流程 -->
+          <view class="faq-container">
+            <block a:for="{{faqList}}" a:for-index="index">
+              <view class="faq-item">
+                <view
+                  class="question-wrapper"
+                  onTap="toggleAnswer"
+                  data-index="{{index}}"
+                >
+                  <text class="question">{{item.question}}</text>
+                  <image
+                    class="arrow {{activeIndex === index ? 'active' : ''}}"
+                    src="/assets/icons/arrow-down.png"
+                    mode="aspectFit"
+                  />
+                </view>
+                <view class="answer {{activeIndex === index ? 'active' : ''}}">
+                  <view class="answer-content">{{item.answer}}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <!-- 底部操作栏 -->
+    <view class="bottom-nav">
+      <view class="nav-items">
+        <view class="nav-item" onTap="onHomeTap">
+          <image class="nav-icon" src="/assets/home-icon.png" mode="aspectFit" />
+          <text class="nav-text">首页</text>
+        </view>
+        <view class="nav-item" onTap="showPopup">
+          <image class="nav-icon" src="/assets/service-icon.png" mode="aspectFit" />
+          <text class="nav-text">客服</text>
+        </view>
+      </view>
+      <view class="action-buttons">
+        <button class="buy-button" onTap="onBuyTap">
+          <text class="button-text">直接购买</text>
+          <text class="button-subtext">¥{{product.retailPrice}}</text>
+        </button>
+        <button class="rent-button" onTap="onRentTap">
+          <text class="button-text">免押租赁</text>
+          <text class="button-subtext">¥{{product.dailyRent}}/天起</text>
+        </button>
+      </view>
+    </view>
+<!-- 客服弹出框 -->
+<view class="popup" a:if="{{isPopupVisible}}">
+  <view class="popup-content">
+    <view class="popup-title">及时高效的沟通方式</view>
+    <view class="popup-message">是否拨打 “{{product.serviceProvider}}” 官方客服电话?</view>
+    <view class="popup-buttons">
+      <button class="popup-button cancel" onTap="hidePopup">取消</button>
+      <button class="popup-button confirm" onTap="makePhoneCall">确定</button>
+    </view>
+  </view>
+</view>
+
+</view>

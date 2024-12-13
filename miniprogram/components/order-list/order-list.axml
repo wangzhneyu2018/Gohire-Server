@@ -1,0 +1,69 @@
+<!-- <view class="order-list">
+  <view a:for="{{orders}}" key="{{item.id}}" class="order-item">
+    <view class="order-name">{{item.productName}}</view>
+    <view class="order-price">¥{{item.productPrice}}</view>
+  </view>
+</view> -->
+
+<view class="container">
+  <view class="order-list">
+    <view class="order-item" a:for="{{orders}}" key="{{item.id}}">
+      <!-- 店铺头部 -->
+      <view class="store-header">
+        <view class="store-info">
+          <view class="store-icon">{{item.storeIcon}}</view>
+          <view class="store-name">
+            <text>{{item.storeName}}</text>
+            <text class="official-tag" a:if="{{item.isOfficial}}">官方</text>
+          </view>
+        </view>
+        <icon type="arrow_right" size="16" color="#999"/>
+      </view>
+
+      <!-- 订单状态 -->
+      <view class="order-status">
+        <text class="status-text">{{item.status}}</text>
+      </view>
+
+      <!-- 商品详情 -->
+      <view class="product-card">
+        <view class="product-info">
+          <image class="product-image" src="{{item.productImage}}" mode="aspectFill" />
+          <view class="product-details">
+            <text class="product-name">{{item.productName}}</text>
+            <text class="product-spec">{{item.productSpec}}</text>
+            <view class="product-price-quantity">
+              <text class="product-price">¥{{item.productPrice}}</text>
+              <text class="product-quantity">×{{item.productQuantity}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 支付详情 -->
+      <view class="payment-details">
+        <view class="total-price">
+          <text>应付:</text>
+          <text class="currency">¥</text>
+          <text class="amount">{{item.totalAmount}}</text>
+          <text class="shipping">({{item.shippingFee}})</text>
+        </view>
+      </view>
+
+      <!-- 警告信息 -->
+      <view class="warning-message" a:if="{{item.hasWarning}}">
+        <icon type="warn" size="16" color="#999"/>
+        <text>{{item.warningMessage}}</text>
+      </view>
+
+      <!-- 操作按钮 -->
+      <view class="action-buttons">
+        <button class="cancel-button" onTap="cancelOrder" data-order-id="{{item.id}}">取消订单</button>
+        <button class="pay-button" type="primary" onTap="goToPay" data-order-id="{{item.id}}">去支付</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+

@@ -1,0 +1,78 @@
+<view class="rental-page">
+  <!-- 商品信息头部 -->
+  <view class="product-header">
+    <image class="product-image" src="{{productImage}}" mode="aspectFit" />
+    <view class="price-info">
+      <view class="daily-price">
+        <text class="price-symbol">¥</text>
+        <text class="price-value">{{productDailyRent}}</text>
+        <text class="price-unit">/天</text>
+      </view>
+    </view>
+    <view class="selected-options">
+      已选：租完续租 | 红色 | 128G | 365天
+    </view>
+  </view>
+
+  <!-- 租赁方案 -->
+  <view class="section">
+    <view class="section-title">租赁方案</view>
+    <view class="rental-plans">
+      <view class="plan-item selected">租完续租</view>
+    </view>
+  </view>
+
+  <!-- 颜色选择 -->
+  <view class="section">
+    <view class="section-title">颜色</view>
+    <view class="color-options">
+      <view class="option-item">绿色</view>
+      <view class="option-item">粉色</view>
+      <view class="option-item">蓝色</view>
+      <view class="option-item">午夜色</view>
+      <view class="option-item">星光色</view>
+      <view class="option-item selected">红色</view>
+    </view>
+  </view>
+
+  <!-- 内存选择 -->
+  <view class="section">
+    <view class="section-title">内存</view>
+    <view class="storage-options">
+      <view class="option-item selected">128G</view>
+      <view class="option-item">256G</view>
+    </view>
+  </view>
+
+  <!-- 租期选择 -->
+  <view class="section">
+    <view class="section-title">租期</view>
+    <view class="period-options">
+      <view class="option-item selected">365天</view>
+    </view>
+  </view>
+
+  <!-- 起租日 -->
+  <view class="section">
+    <view class="section-title">起租日</view>
+    <view class="rental-start-notice">
+      不支持自选起租日，预计下单后+3天
+    </view>
+  </view>
+
+  <!-- 租赁数量 -->
+  <view class="section">
+    <view class="section-title">租赁数量</view>
+    <view class="quantity-selector">
+      <view class="quantity-btn {{quantity <= 1 ? 'disabled' : ''}}" onTap="decreaseQuantity">-</view>
+      <input class="quantity-input" type="number" value="{{quantity}}" disabled />
+      <view class="quantity-btn" onTap="increaseQuantity">+</view>
+    </view>
+  </view>
+
+  <!-- 底部确认按钮 -->
+  <view class="bottom-button">
+    <button class="confirm-button" onTap="onConfirmRental">免押租赁</button>
+  </view>
+</view>
+

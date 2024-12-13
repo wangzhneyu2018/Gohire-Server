@@ -1,0 +1,30 @@
+<view class="container">
+
+  <view class="header">
+    <view class="header-left">
+      <text class="title">全部</text>
+    </view>
+
+  </view>
+  <view class="categories-grid">
+    <view
+      a:for="{{categories}}"
+      a:key="id"
+      data-id="{{item.id}}"
+      onTap="navigateToCategory"
+      class="category-item"
+    >
+      <navigator url="{{item.href}}" hover-class="none">
+        <view class="category-card">
+          <view class="category-text">
+            <text class="category-title">{{item.name}}</text>
+            <text class="category-description">{{item.desc}}</text>
+          </view>
+          <image class="category-image" src="{{item.icon}}" mode="aspectFit" />
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+</view>

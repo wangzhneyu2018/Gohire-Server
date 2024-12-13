@@ -1,0 +1,72 @@
+.container {
+  min-height: 100vh;
+  background-color: rgba(239, 246, 255, 0.5);
+}
+
+.header {
+  position: sticky;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32rpx;
+  height: 50px;
+}
+.header-left {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中（如果需要） */
+ 
+}
+
+.title {
+  font-size: 32rpx; /* 根据需要调整字体大小 */
+}
+
+
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding:0 32rpx;
+}
+
+.category-item {
+  width: 50%;
+  padding: 16rpx;
+  box-sizing: border-box;
+}
+
+.category-card {
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  height: 160rpx;
+}
+
+.category-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  margin-bottom: 8rpx;
+}
+
+.category-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.category-description {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.category-image {
+  width: 80rpx;
+  height: 80rpx;
+}
+

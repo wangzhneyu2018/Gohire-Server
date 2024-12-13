@@ -1,0 +1,100 @@
+<view class="container">
+
+
+  <!-- 搜索栏 -->
+  <view class="search-bar-container">
+    <view class="search-bar">
+      <view class="search-input">
+        <image
+          class="search-icon"
+          src="/images/icon/no_search_result.png"
+          mode="aspectFit"
+        />
+        <input type="text" placeholder="金龟相伴 财运亨通" />
+        <button class="search-button-1">搜索</button>
+      </view>
+
+    </view>
+  </view>
+
+
+  <!-- 分类导航 -->
+  <view class="category-grid">
+    <view a:for="{{categories}}" class="category-item" key="index" onTap="goToCategoryPage" data-id="{{item.id}}" data-name="{{item.name}}">
+      <image class="category-icon" src="{{item.icon}}" mode="aspectFit" />
+      <text class="category-name">{{item.name}}</text>
+      <text a:if="{{item.desc}}" class="category-desc">{{item.desc}}</text>
+    </view>
+  </view>
+
+  <!-- 促销标签 -->
+  <view class="promo-tags">
+    <view class="tag-scroll">
+      <view a:for="{{promoTags}}" class="tag-item" key="{{item.id}}">
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商品轮播图-->
+  <view class="carousel-container">
+    <swiper
+      indicator-dots="{{true}}"
+      indicator-color="rgba(0, 0, 0, .3)"
+      indicator-active-color="#000000"
+      autoplay="{{true}}"
+      interval="{{3000}}"
+      duration="{{500}}"
+      circular="{{true}}"
+      onChange="onSwiperChange"
+    >
+      <swiper-item a:for="{{products}}" key="{{index}}">
+        <view class="product-item">
+          <image src="{{item.image}}" mode="aspectFill" />
+          <view class="product-info">
+            <text class="product-name">{{item.name}}</text>
+            <text class="product-price">{{item.price}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="custom-indicators">
+      <view
+        a:for="{{products}}"
+        class="indicator {{currentIndex === index ? 'active' : ''}}"
+        key="{{index}}"
+      >
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 产品列表 -->
+  <view class="product-container">
+    <view class="productsList-grid">
+      <view a:for="{{productsList}}" class="productsList-item" key="{{item.id}}">
+        <view class="productsList-card">
+          <image src="{{item.image}}" mode="aspectFit" class="productsList-image" />
+          <view class="productsList-info">
+            <view class="productsList-header">
+              <text a:if="{{item.tag}}" class="tag">{{item.tag}}</text>
+              <text class="productsList-name">{{item.name}}</text>
+            </view>
+            <view class="price-section">
+              <text class="price-symbol">¥</text>
+              <text class="price-amount">{{item.price}}</text>
+              <text class="price-unit">/天</text>
+            </view>
+            <view class="rental-info">
+              <text class="rental-text">{{item.rentalStatus}}</text>
+              <text class="rental-text">{{item.rentalType}}</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

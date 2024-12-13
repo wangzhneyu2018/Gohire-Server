@@ -1,0 +1,69 @@
+/* 头像组件样式 */
+.avatar {
+  margin: 8px;
+}
+.avatar-custom {
+  margin: 8px;
+}
+.avatar-custom image {
+  width: 40px;
+  height: 40px;
+}
+/* 订单列表 */
+/* 订单容器 */
+.order-container {
+  padding: 20rpx;
+}
+
+/* 分类导航 */
+.order-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.order-nav view {
+  padding: 10rpx 20rpx;
+  cursor: pointer;
+}
+
+.order-nav .active {
+  color: #1890ff;
+  border-bottom: 2rpx solid #1890ff;
+}
+
+/* 订单状态导航 */
+.status-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.status-nav view {
+  padding: 10rpx 20rpx;
+  cursor: pointer;
+}
+
+.status-nav .active {
+  color: #1890ff;
+  border-bottom: 2rpx solid #1890ff;
+}
+
+/* 订单内容展示 */
+.order-list {
+  padding: 20rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+}
+
+.order-item {
+  margin-bottom: 20rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}

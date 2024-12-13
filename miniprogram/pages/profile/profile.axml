@@ -1,0 +1,63 @@
+<view class="profile-page">
+  <!-- 头部 -->
+  <view class="header">
+    <text class="title">我的</text>
+    <view class="header-icons">
+      <image class="icon" src="/assets/star.png" mode="aspectFit" />
+      <image class="icon" src="/assets/more.png" mode="aspectFit" />
+      <image class="icon" src="/assets/close.png" mode="aspectFit" />
+    </view>
+  </view>
+
+  <!-- 用户信息 -->
+  <view class="user-info">
+    <image class="avatar" src="/assets/avatar-placeholder.png" mode="aspectFit" />
+    <view class="user-name">
+      <text>立即授权</text>
+      <image class="verified-icon" src="/assets/verified.png" mode="aspectFit" />
+    </view>
+  </view>
+
+  <!-- VIP横幅 -->
+  <view class="vip-banner">
+    <view class="vip-info">
+      <text class="vip-title">免费领11大会员权益</text>
+      <text class="vip-subtitle">租币兑好礼/分享领10元现金可提现</text>
+    </view>
+    <button class="upgrade-btn" onTap="onUpgrade">去升级</button>
+  </view>
+
+  <!-- 快捷操作 -->
+  <view class="quick-actions">
+    <view class="action-item" a:for="{{quickActions}}" key="{{index}}">
+      <view class="action-icon">{{item.icon}}</view>
+      <text class="action-text">{{item.text}}</text>
+    </view>
+  </view>
+
+  <!-- 租赁订单 -->
+  <view class="rental-orders">
+    <view class="section-header">
+      <text class="section-title">租赁订单</text>
+      <text class="section-subtitle">平台租赁</text>
+    </view>
+    <view class="order-actions">
+      <view class="action-item" a:for="{{rentalActions}}" key="{{index}}">
+        <view class="action-icon">{{item.icon}}</view>
+        <text class="action-text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 我的服务 -->
+  <view class="my-services">
+    <text class="section-title">我的服务</text>
+    <view class="services-grid">
+      <view class="service-item" a:for="{{myServices}}" key="{{index}}">
+        <view class="service-icon" style="background-color: {{item.bgColor}};">{{item.icon}}</view>
+        <text class="service-text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

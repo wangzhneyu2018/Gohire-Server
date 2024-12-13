@@ -1,0 +1,613 @@
+.container {
+  background-color: #f5f5f5;
+  width: 100%;;
+  }
+
+
+.product-image {
+width: 100%;
+  height:200px;
+}
+
+.product-image image {
+  width: 100%;
+  height: 200px;
+
+}
+
+.product-container {
+  padding: 24rpx 0 16px 16px;
+  background-color: #fff;
+  border-radius: 0 0 20px;
+}
+
+/* 价格样式 */
+.price-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16rpx;
+}
+
+.price-symbol {
+  color: #ff5500;
+  font-size: 28rpx;
+}
+
+.price-amount {
+  color: #ff5500;
+  font-size: 44rpx;
+  font-weight: 500;
+  margin-right: 4rpx;
+}
+
+.price-unit {
+  color: #ff5500;
+  font-size: 24rpx;
+}
+
+/* 标题样式 */
+.title-container {
+  margin-bottom: 16rpx;
+}
+
+.tag-new {
+  display: inline-block;
+  background-color: #e7f1ff;
+  color: #1677ff;
+  font-size: 24rpx;
+  padding: 4rpx 8rpx;
+  border-radius: 4rpx;
+  margin-right: 8rpx;
+}
+
+.title {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+/* 租赁条款样式 */
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.term-item {
+  background-color: #e0dddd;
+  border-radius: 8px;
+  padding: 3px 6px;
+  font-size: 24rpx;
+  margin-right: 10px;
+}
+
+
+/* 芝麻信用样式 */
+.credit-container {
+  background-color: #fc0909;
+  margin: 0px;
+  width: 100%;
+}
+
+.credit-content {
+  display: flex;
+  align-items: center;
+  background-color: #e7f1ff;
+  padding: 16rpx 24rpx;
+  border-radius: 0 0 20px;
+
+}
+
+.credit-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+
+.credit-text {
+  color: #1677ff;
+  font-size: 28rpx;
+  margin-right: 8rpx;
+}
+
+.credit-benefit {
+  color: #1677ff;
+  font-size: 28rpx;
+  margin-right: 16rpx;
+}
+
+.credit-requirement {
+  color: #1677ff;
+  font-size: 24rpx;
+}
+
+/* 租赁流程 */
+.rental-process {
+  background-color: #fff;
+  padding: 24rpx;
+  margin: 10px 0;
+  border-radius: 20px;
+}
+
+.process-title {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 24rpx;
+}
+
+.process-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.step-icon {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12rpx;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.step-text {
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.step-arrow {
+  width: 24rpx;
+  height: 24rpx;
+  border-top: 2rpx solid #ddd;
+  border-right: 2rpx solid #ddd;
+  transform: rotate(45deg);
+  margin: 0 8rpx;
+  margin-bottom: 24rpx;
+}
+
+/* 参数选择 */
+.product-details {
+  background-color: #fff;
+  padding: 0 24rpx;
+  border-radius: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.item-label {
+  width: 120rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.item-content {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+  padding-right: 20rpx;
+}
+
+.highlight-text {
+  color: #1677ff;
+}
+
+.normal-text {
+  color: #333;
+}
+
+.arrow {
+  width: 12rpx;
+  height: 12rpx;
+  border-top: 2rpx solid #ccc;
+  border-right: 2rpx solid #ccc;
+  transform: rotate(45deg);
+  margin-top: 8rpx;
+}
+
+.guarantee-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 24rpx;
+}
+
+.guarantee-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+
+.separator {
+  color: #ddd;
+  margin: 0 12rpx;
+}
+
+/* 参数和选择项的特殊样式 */
+.params .item-content,
+.selection .item-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* 切换菜单 */
+.tab-navigator {
+  width: 100%;
+  background: #fff;
+}
+
+.tab-bar {
+  display: flex;
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.tab-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tab-text {
+  font-size: 28rpx;
+  color: #666;
+  padding: 0 8rpx;
+}
+
+.tab-item.active .tab-text {
+  color: #333;
+  font-weight: 500;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48rpx;
+  height: 4rpx;
+  background: #1677ff;
+  border-radius: 2rpx;
+}
+
+.content-area {
+  width: 100%;
+}
+
+.tab-content {
+  padding: 24rpx;
+}
+
+.product-image {
+  width: 100%;
+  height: 400rpx;
+  background: #000;
+}
+
+.product-details,
+.rental-instructions,
+.faq-content {
+  margin-top: 24rpx;
+}
+
+/* 租赁流程内容 */
+.process-container {
+  padding: 16px;
+  background: #fff;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.section-number {
+  width: 24px;
+  height: 24px;
+  background: #0091ff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.step-text {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.step-subtext {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+
+.calendar {
+  display: flex;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.day {
+  flex: 1;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.day.selected {
+  background: #0091ff;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.option {
+  padding: 16px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.option-title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.option-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* 问题内容 */
+.faq-container {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.faq-item {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #fff;
+}
+
+.question {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  margin-right: 8px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.active {
+  transform: rotate(180deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: #f8f8f8;
+}
+
+.answer.active {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
+}
+
+.answer-content {
+  padding: 12px 16px 16px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/*底部导航栏 */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1rpx solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  height: 120rpx;
+}
+
+.nav-items {
+  display: flex;
+  gap: 40rpx;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.nav-text {
+  font-size: 24rpx;
+  color: #333333;
+  margin-top: 4rpx;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20rpx;
+}
+
+.buy-button, .rent-button {
+  border-radius: 40rpx;
+  padding: 16rpx 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buy-button {
+  background-color: #e6f3ff;
+}
+
+.rent-button {
+  background-color: #108ee9;
+}
+
+.button-text {
+  font-size: 28rpx;
+  line-height: 1;
+}
+
+.button-subtext {
+  font-size: 22rpx;
+  line-height: 1;
+  margin-top: 4rpx;
+}
+
+.buy-button .button-text,
+.buy-button .button-subtext {
+  color: #108ee9;
+}
+
+.rent-button .button-text,
+.rent-button .button-subtext {
+  color: #ffffff;
+}
+/* 客服弹出框 */
+.container {
+  padding: 20rpx;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  width: 80%;
+  max-width: 600rpx;
+}
+
+.popup-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.popup-message {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-button {
+  flex: 1;
+  margin: 0 10rpx;
+}
+
+.cancel {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.confirm {
+  background-color: #1677ff;
+  color: #fff;
+}
+
+

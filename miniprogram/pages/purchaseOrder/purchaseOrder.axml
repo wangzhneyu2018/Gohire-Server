@@ -1,0 +1,96 @@
+<view class="order-page">
+  <!-- 顶部配送信息 -->
+  <view class="delivery-info">
+    <view class="address-section">
+      <view class="location">上地科贸大厦22室</view>
+      <view class="contact">
+        <text>王振宇</text>
+        <text class="phone">13910338403</text>
+      </view>
+    </view>
+    <view class="arrow"></view>
+  </view>
+
+  <!-- 商品信息 -->
+  <view class="product-info">
+    <image src="{{productImage}}" mode="aspectFit" />
+    <text>{{productName}}</text>
+    <text>¥{{productPrice}}</text>
+  </view>
+
+  <!-- 颜色选择 -->
+  <view class="option-section">
+    <view class="option-title">颜色</view>
+    <view class="color-options">
+      <view a:for="{{productColor}}" a:key="*this" class="option-item {{selectedColor === item ? 'selected' : ''}}" onTap="selectColor" data-color="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 内存选择 -->
+  <view class="option-section">
+    <view class="option-title">内存</view>
+    <view class="storage-options">
+      <view a:for="{{productStorage}}" a:key="*this" class="option-item {{selectedStorage === item ? 'selected' : ''}}" onTap="selectStorage" data-storage="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 数量选择 -->
+  <view class="quantity-section">
+    <view class="option-title">数量</view>
+    <view class="quantity-selector">
+      <text class="limit-text">限购1件</text>
+      <view class="quantity-controls">
+        <view class="quantity-btn" onTap="decreaseQuantity">-</view>
+        <text class="quantity-value">{{quantity}}</text>
+        <view class="quantity-btn" onTap="increaseQuantity">+</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 运费信息 -->
+  <view class="shipping-section">
+    <text class="option-title">运费</text>
+    <text class="free-shipping">包邮</text>
+  </view>
+
+  <!-- 优惠信息 -->
+  <view class="discount-section">
+    <text class="option-title">优惠</text>
+    <view class="discount-value">
+      <text class="discount-text">共减</text>
+      <text class="discount-amount">¥66</text>
+      <text class="arrow">></text>
+    </view>
+  </view>
+
+  <!-- 备注 -->
+  <view class="notes-section">
+    <text class="option-title">备注</text>
+    <view class="notes-input">
+      <text class="placeholder">无备注</text>
+      <text class="arrow">></text>
+    </view>
+  </view>
+
+  <!-- 底部支付栏 -->
+  <view class="bottom-bar">
+    <view class="payment-info">
+      <view class="total-section">
+        <text>合计</text>
+        <text class="total-price">¥{{totalPrice}}</text>
+      </view>
+      <view class="discount-info">
+        <text>优惠</text>
+        <text class="discount-value">¥66</text>
+      </view>
+    </view>
+    <button class="confirm-button" onTap="onConfirmOrder">
+      确认下单¥{{totalPrice}}
+    </button>
+  </view>
+</view>
+
