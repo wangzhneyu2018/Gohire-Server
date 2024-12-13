@@ -133,42 +133,31 @@ Page({
     // 模拟从服务器获取分类列表数据
     this.fetchCategories();
   },
-  fetchCategories() {
-    // 假设这是从服务器获取数据的模拟
-    const mockData = [
-      {
-        id: 1,
-        name: '电子产品',
-        icon: '/images/Electronic-Products.png',
-      },
-      {
-        id: 2,
-        name: '厨房设备',
-        icon: '/images/Furniture-Items.png',
-      },
-      {
-        id: 3,
-        name: '办公设备',
-        icon: '/images/Office-Equipment.png',
-      },
-      {
-        id: 4,
-        name: '家用电器',
-        icon: '/images/Furniture-Appliances.png',
-      },
-      {
-        id: 5,
-        name: '全部',
-        icon: '/images/icon/grid.png',
-      }
-      // 更多分类
-    ];
 
-    // 将数据设置到页面的 data 中
-    this.setData({
-      categories: mockData 
-    });
+  async fetchCategories() {
+    try {
+      const res = await my.cloud.database().collection('popularCategories').get();
+      console.log('Fetched response:', res); // 打印整个响应对象
+
+      if (res) {
+        this.setData({
+          categories: res
+        });
+      } else {
+        my.showToast({
+          content: '数据获取失败，请重试',
+          type: 'fail'
+        });
+      }
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      my.showToast({
+        content: '数据获取失败，请重试',
+        type: 'fail'
+      });
+    }
   },
+
   goToCategoryPage(event) {
     const categoryId = event.currentTarget.dataset.id;
     const categoryName = event.currentTarget.dataset.name;

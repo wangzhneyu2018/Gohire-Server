@@ -20,7 +20,7 @@
 
   <!-- 分类导航 -->
   <view class="category-grid">
-    <view a:for="{{categories}}" class="category-item" key="index" onTap="goToCategoryPage" data-id="{{item.id}}" data-name="{{item.name}}">
+    <view a:for="{{categories}}" class="category-item" a:key="_id" onTap="goToCategoryPage" data-id="{{item.id}}" data-name="{{item.name}}">
       <image class="category-icon" src="{{item.icon}}" mode="aspectFit" />
       <text class="category-name">{{item.name}}</text>
       <text a:if="{{item.desc}}" class="category-desc">{{item.desc}}</text>

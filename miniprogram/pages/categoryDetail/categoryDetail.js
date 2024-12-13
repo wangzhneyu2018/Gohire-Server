@@ -81,7 +81,6 @@ Page({
         icon: '/images/electronics.png',
         desc: '手机、电脑、平板等',
         products: [{
-            id: 101,
             name: 'iPhone 13',
             price: 6999,
             stock: 10,
@@ -94,8 +93,6 @@ Page({
             rentalCount: '89人租过',
             shippingAddress:'杭州市',
             merchantIcon: '/assets/merchants/merchant1.png'
-        
-
           },
           {
             id: 102,
